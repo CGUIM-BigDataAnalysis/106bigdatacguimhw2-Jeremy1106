@@ -98,6 +98,7 @@ library(knitr)
 knitr::kable(head(sortintaiwanall,10))
 ```
 
+
 ### 哪間大學的境外生最多呢？
 ```{r ToTWNUniversity}
 #這是R Code Chunk
@@ -163,6 +164,7 @@ sortschoolall$total<-sort(sortschoolall$total,decreasing = T)
 knitr::kable(head(sortschoolall,10))
 ```
 
+
 ### 各個國家來台灣唸書的學生人數條狀圖
 ```{r ToTWNCountryBar}
 #這是R Code Chunk
@@ -174,6 +176,7 @@ library(ggplot2)
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90 , hjust = 1))
 ```
+
 
 ### 各個國家來台灣唸書的學生人數面量圖
 ```{r ToTWNCountryMap}
@@ -207,6 +210,7 @@ country_choropleth(sortintaiwanengpic,
                    "全國來台灣念書的學生")
 ```
 
+
 ## 台灣學生國際交流分析
 
 ### 資料匯入與處理
@@ -231,6 +235,7 @@ group$ncountry<-sort(group$ncountry,decreasing = T)
 knitr::kable(head(group,10))
 ```
 
+
 ### 哪間大學的出國交流學生數最多呢？
 ```{r FromTWNUniversity}
 #這是R Code Chunk
@@ -244,6 +249,7 @@ groupupschool$nschool<-sort(groupupschool$nschool,decreasing = T)
 knitr::kable(head(groupupschool,10))
 ```
 
+
 ### 台灣大專院校的學生最喜歡去哪些國家進修交流條狀圖
 ```{r FromTWNCountryBar}
 #這是R Code Chunk
@@ -255,6 +261,7 @@ group%>%
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90 , hjust = 1))
 ```
+
 
 ### 台灣大專院校的學生最喜歡去哪些國家進修交流面量圖
 ```{r FromTWNCountryMap}
@@ -286,6 +293,7 @@ country_choropleth(gooutschoolengpic,
                    "台灣出去哪裡念書")
 ```
 
+
 ## 台灣學生出國留學分析
 
 ### 資料匯入與處理
@@ -301,6 +309,7 @@ pop105$總人數<- sort(pop105$總人數,decreasing = T)
 
 knitr::kable(head(pop105,10))
 ```
+
 
 ### 台灣學生最喜歡去哪些國家留學面量圖
 ```{r FromTWNAbMap}
@@ -330,6 +339,7 @@ pop105engpic<-group_by(pop105eng,region)%>%
 country_choropleth(pop105engpic,
                    "台灣出去念書的學生")
 ```
+
 
 ## 綜合分析
 
